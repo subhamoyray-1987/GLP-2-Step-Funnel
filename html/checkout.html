@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout - VitalPath Medical</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/root.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/checkout.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body class="vp-page checkout-page">
+  <!-- SITE HEADER -->
+  <header class="vp-header">
+    <div class="vp-container vp-header-inner">
+      <a href="index.html" class="vp-logo">
+        <img src="images/logo.svg" class="vp-logo-img" alt="VitalPath Medical">
+      </a>
+      <div class="vp-secure-badge">
+        <img src="images/secure-icon.svg" alt="">
+        <span>Secure Checkout</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="vp-checkout-main">
+    <div class="vp-container vp-checkout-layout">
+      <div class="vp-checkout-left">
+        <div class="vp-checkout-card">
+          <h2 class="vp-checkout-heading">
+            <span class="vp-step-badge">1</span>
+            Shipping Information
+          </h2>
+          <div class="vp-form-row">
+            <div class="vp-form-group">
+              <label>First Name</label>
+              <input type="text" value="John" required>
+            </div>
+            <div class="vp-form-group">
+              <label>Last Name</label>
+              <input type="text" required>
+            </div>
+          </div>
+          <div class="vp-form-group">
+            <label>Address</label>
+            <input type="text" placeholder="Street Address" required>
+          </div>
+          <div class="vp-form-row">
+            <div class="vp-form-group">
+              <label>City</label>
+              <input type="text" placeholder="City" required>
+            </div>
+            <div class="vp-form-group">
+              <label>State</label>
+              <select required>
+                <option value="" disabled selected>Select State</option>
+                <option value="AL">Alabama</option>
+                <option value="AK">Alaska</option>
+                <option value="AZ">Arizona</option>
+                <option value="AR">Arkansas</option>
+                <option value="CA">California</option>
+                <option value="CO">Colorado</option>
+                <option value="CT">Connecticut</option>
+                <option value="DE">Delaware</option>
+                <option value="FL">Florida</option>
+                <option value="GA">Georgia</option>
+                <option value="HI">Hawaii</option>
+                <option value="ID">Idaho</option>
+                <option value="IL">Illinois</option>
+                <option value="IN">Indiana</option>
+                <option value="IA">Iowa</option>
+                <option value="KS">Kansas</option>
+                <option value="KY">Kentucky</option>
+                <option value="LA">Louisiana</option>
+                <option value="ME">Maine</option>
+                <option value="MD">Maryland</option>
+                <option value="MA">Massachusetts</option>
+                <option value="MI">Michigan</option>
+                <option value="MN">Minnesota</option>
+                <option value="MS">Mississippi</option>
+                <option value="MO">Missouri</option>
+                <option value="MT">Montana</option>
+                <option value="NE">Nebraska</option>
+                <option value="NV">Nevada</option>
+                <option value="NH">New Hampshire</option>
+                <option value="NJ">New Jersey</option>
+                <option value="NM">New Mexico</option>
+                <option value="NY">New York</option>
+                <option value="NC">North Carolina</option>
+                <option value="ND">North Dakota</option>
+                <option value="OH">Ohio</option>
+                <option value="OK">Oklahoma</option>
+                <option value="OR">Oregon</option>
+                <option value="PA">Pennsylvania</option>
+                <option value="RI">Rhode Island</option>
+                <option value="SC">South Carolina</option>
+                <option value="SD">South Dakota</option>
+                <option value="TN">Tennessee</option>
+                <option value="TX">Texas</option>
+                <option value="UT">Utah</option>
+                <option value="VT">Vermont</option>
+                <option value="VA">Virginia</option>
+                <option value="WA">Washington</option>
+                <option value="WV">West Virginia</option>
+                <option value="WI">Wisconsin</option>
+                <option value="WY">Wyoming</option>
+                <option value="DC">District of Columbia</option>
+              </select>
+            </div>
+          </div>
+          <div class="vp-form-row">
+            <div class="vp-form-group">
+              <label>Zip Code</label>
+              <input type="text" placeholder="Zip Code" inputmode="numeric" maxlength="10" autocomplete="postal-code"
+                required>
+            </div>
+            <div class="vp-form-group">
+              <label>Phone Number</label>
+              <input type="tel" placeholder="Phone Number" inputmode="tel" autocomplete="tel" required>
+            </div>
+          </div>
+        </div>
+        <div class="vp-checkout-card">
+          <h2 class="vp-checkout-heading">
+            <span class="vp-step-badge">2</span>
+            Payment Details
+          </h2>
+          <label class="vp-form-label-standalone">Payment Method</label>
+          <div class="vp-payment-methods">
+            <button type="button" class="vp-payment-method vp-payment-method-active" data-method="card">
+              <img src="images/card-icon.svg" alt="">
+              Credit Card
+            </button>
+            <button type="button" class="vp-payment-method" data-method="paypal">
+              <img src="images/paypal_icon.svg" alt="">
+              PayPal
+            </button>
+            <button type="button" class="vp-payment-method" data-method="applepay">
+              <img src="images/apple-icon.svg" alt="">
+              Apple Pay
+            </button>
+            <button type="button" class="vp-payment-method" data-method="googlepay">
+              <img src="images/google-icon.svg" alt="">
+              Google Pay
+            </button>
+          </div>
+          <div class="vp-payment-fields" data-payment-fields="card">
+            <div class="vp-form-group">
+              <label>Card Number</label>
+              <div class="vp-input-with-icon">
+                <img src="images/card-number-Icon.svg" alt="">
+                <input type="text" placeholder="0000 0000 0000 0000" inputmode="numeric" maxlength="19"
+                  autocomplete="cc-number" required>
+              </div>
+            </div>
+            <div class="vp-form-row">
+              <div class="vp-form-group">
+                <label>Expiry Date</label>
+                <input type="text" id="cardExpiry" class="vp-expiry-input" placeholder="MM/YY" inputmode="numeric"
+                  maxlength="5" autocomplete="cc-exp" required>
+              </div>
+              <div class="vp-form-group">
+                <label>CVC</label>
+                <div class="vp-input-with-icon vp-input-icon-right">
+                  <input type="text" placeholder="123" inputmode="numeric" maxlength="4" autocomplete="cc-csc" required>
+                  <img src="images/que-icon.svg" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="vp-payment-fields" data-payment-fields="paypal" hidden>
+            <div class="vp-form-group">
+              <label>PayPal Email Address</label>
+              <input type="email" placeholder="you@example.com" autocomplete="email" required>
+            </div>
+            <div class="vp-form-group">
+              <label>PayPal Password</label>
+              <input type="password" placeholder="Enter your PayPal password" autocomplete="current-password" required>
+            </div>
+          </div>
+          <div class="vp-payment-fields" data-payment-fields="applepay" hidden>
+            <p class="vp-payment-wallet-note">Apple Pay is ready. Confirm with Face ID or Touch ID to complete your purchase.</p>
+          </div>
+          <div class="vp-payment-fields" data-payment-fields="googlepay" hidden>
+            <p class="vp-payment-wallet-note">Google Pay is ready. Confirm with your saved Google account to complete your purchase.</p>
+          </div>
+        </div>
+      </div>
+      <aside class="vp-order-sidebar">
+        <div class="vp-countdown-banner">
+          <img src="images/clock-che-icon.svg" alt="">
+          <span>Your prescription reservation expires in <span class="vp-countdown-timer">08:43</span></span>
+        </div>
+        <h3 class="vp-order-summary-title">Order Summary</h3>
+        <div class="vp-order-photo">
+          <img src="images/hero-banner.webp" srcset="
+              images/hero-banner.webp 1x,
+              images/hero-banner@2x.webp 2x,
+              images/hero-banner@4x.webp 4x
+            " alt="VitalPath GLP-1 weight loss support pen and packaging" width="388" height="300" loading="lazy">
+        </div>
+        <div class="vp-order-line">
+          <span>VitalPath Advanced Treatment</span>
+          <span class="vp-order-price">$129.00</span>
+        </div>
+        <div class="vp-order-line">
+          <span>Standard Shipping</span>
+          <span>FREE</span>
+        </div>
+        <div class="vp-order-divider"></div>
+        <div class="vp-order-total">
+          <span>Total</span>
+          <span class="vp-total-amount">$129.00</span>
+        </div>
+        <button type="button" class="vp-btn vp-btn-primary vp-btn-full">
+          Complete Order
+          <img src="images/cloth-btn-seq.svg" alt="">
+        </button>
+        <div class="vp-order-badges">
+          <span><img src="images/check-seq-icon.svg" alt=""> HIPAA Compliant</span>
+          <span><img src="images/cloth-btn-seq.svg" alt=""> Secure 256-bit SSL</span>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <!-- SITE FOOTER -->
+  <footer class="vp-footer">
+    <div class="vp-container">
+      <a href="index.html" class="vp-footer-logo">
+        <img src="images/footer-logo.svg" alt="VitalPath Medical">
+      </a>
+      <nav class="vp-footer-links">
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">HIPAA Privacy</a>
+        <a href="#">Medical Disclaimer</a>
+      </nav>
+      <p class="vp-footer-disclaimer">Notice: The products and information found on this site are not intended to
+        replace professional medical advice or treatment. These statements have not been evaluated by the Food and Drug
+        Administration. These products are not intended to diagnose, treat, cure or prevent any disease. Individual
+        results may vary.</p>
+      <p class="vp-footer-copyright">&copy; 2026 Unify CMS. All Rights Reserved. HIPAA Compliant Medical Provider.</p>
+    </div>
+  </footer>
+
+  <script src="js/custom.js"></script>
+</body>
+
+</html>

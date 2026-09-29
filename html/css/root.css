@@ -1,0 +1,241 @@
+/* ==========================================================================
+   VITALPATH MEDICAL (GLP2) - MASTER STYLESHEET
+   1284px Artboard Baseline with Fluid `vw` Scaling on Desktop (>= 1024px)
+   Standard `px` for Tablet (768px-1023.98px) and Mobile (<= 767.98px)
+   ========================================================================== */
+
+/* ==========================================================================
+   DESIGN TOKENS (:root VARS)
+   ========================================================================== */
+:root {
+  --font-main: "Inter", sans-serif;
+  --font-heading: "Montserrat", sans-serif;
+
+  --color-primary: #0050CB;
+  --color-primary-hover: #003D9E;
+  --color-navy: #001248;
+  --color-navy-light: #0A2A6B;
+  --color-teal: #016970;
+  --color-teal-light: #7DF4FF;
+
+  --bg-page: #F5F9FC;
+  --bg-white: #FFFFFF;
+  --bg-navy: var(--color-navy);
+  --bg-placeholder: #E9ECEF;
+  --bg-tag: #E8EFFC;
+
+  --text-heading: var(--color-navy);
+  --text-body: #191C1D;
+  --text-muted: #6B7280;
+  --text-light: #FFFFFF;
+  --text-light-muted: #AAB4CC;
+
+  --border-color: #E2E5EA;
+  --border-input: #D3D7DE;
+  --border-color-light: #E1E3E4;
+
+  --color-error: #93000A;
+  --color-error-bg: #FFDAD6;
+  --color-success: #016970;
+
+  --border-input-error: #DC2626;
+  --border-input-success: #16A34A;
+
+  --text-body-secondary: #424656;
+  --text-icon-muted: #727687;
+  --text-input-placeholder: #9AA1AE;
+
+  --border-width: 0.0779vw;
+
+  --radius-xs: 0.3115vw;
+  --radius-sm: 0.4673vw;
+  --radius-md: 0.6231vw;
+  --radius-lg: 0.9346vw;
+  --radius-xl: 1.4019vw;
+
+  --card-padding: 2.5000vw;
+
+  --shadow-sm: 0 var(--border-width) 0.1558vw 0 rgba(0,0,0,0.05);
+  --overlay-white-15: rgba(255,255,255,0.15);
+  --overlay-gray-20: rgba(225,227,228,0.2);
+
+  --space-2xs: 0.4673vw;
+  --space-xs: 0.6231vw;
+  --space-sm: 0.7788vw;
+  --space-md: 0.9346vw;
+  --space-base: 1.0903vw;
+  --space-lg: 1.4019vw;
+  --space-xl: 1.7134vw;
+  --space-2xl: 2.0000vw;
+  --space-3xl: 2.5000vw;
+
+  --fs-xs: 0.9346vw;
+  --fs-sm: 1.0938vw;
+  --fs-md: 1.4063vw;
+  --fs-lg: 1.5625vw;
+  --fs-xl: 1.8750vw;
+  --fs-2xl: 5.0000vw;
+
+  --ls-sm: 0.0389vw;
+  --ls-md: 0.0547vw;
+  --ls-label: 0.1090vw;
+  --ls-tight: -0.0374vw;
+  --ls-tighter: -0.0997vw;
+
+  --lh-2xs: 1.2461vw;
+  --lh-xs: 1.0903vw;
+  --lh-sm: 1.5576vw;
+  --lh-md: 1.8692vw;
+  --lh-base: 1.8750vw;
+  --lh-lg: 2.1807vw;
+  --lh-xl: 2.3364vw;
+
+  --h1-fs: 3.7500vw;
+  --h1-lh: 4.2757vw;
+  --h1-fw: 800;
+
+  --h2-fs: 2.1875vw;
+  --h2-lh: 3.1153vw;
+  --h2-fw: 700;
+
+  --h3-fs: 1.5576vw;
+  --h3-lh: 1.8692vw;
+  --h3-fw: 700;
+
+  --h4-fs: 1.2461vw;
+  --h4-lh: 1.5576vw;
+  --h4-fw: 700;
+
+  --p-fs: 1.2500vw;
+  --p-lh: 1.9470vw;
+  --p-fw: 400;
+
+  --container-width: 90.0000vw;
+  --container-max: 89.7196vw;
+}
+
+/* ==========================================================================
+   HTML RESETS & GLOBAL ELEMENTS
+   ========================================================================== */
+* , *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  background: var(--bg-page);
+  font-family: var(--font-main);
+  color: var(--text-body);
+}
+
+.vp-page {
+  font-family: var(--font-main);
+  color: var(--text-body);
+  background: var(--bg-page);
+  overflow-x: hidden;
+}
+
+.vp-page h1, .vp-page h2, .vp-page h3, .vp-page h4 {
+  font-family: var(--font-heading);
+  color: var(--text-heading);
+  margin: 0;
+}
+.vp-page h1 { font-weight: var(--h1-fw); font-size: var(--h1-fs); line-height: var(--h1-lh); }
+.vp-page h2 { font-weight: var(--h2-fw); font-size: var(--h2-fs); line-height: var(--h2-lh); }
+.vp-page h3 { font-weight: var(--h3-fw); font-size: var(--h3-fs); line-height: var(--h3-lh); }
+.vp-page h4 { font-weight: var(--h4-fw); font-size: var(--h4-fs); line-height: var(--h4-lh); }
+
+.vp-page p {
+  font-family: var(--font-main);
+  font-size: var(--p-fs);
+  line-height: var(--p-lh);
+  font-weight: var(--p-fw);
+  color: var(--text-body);
+  margin: 0;
+}
+
+.vp-container {
+  width: 100%;
+  max-width: var(--container-width);
+  margin: 0 auto;
+}
+
+img, svg {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  font-family: var(--font-main);
+  cursor: pointer;
+}
+
+/* ==========================================================================
+   BUTTON COMPONENTS
+   ========================================================================== */
+.vp-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5556vw;
+  font-family: var(--font-main);
+  font-weight: 700;
+  border: none;
+  border-radius: 0.5556vw;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.vp-btn img {
+  width: 1.0903vw;
+  height: 1.0903vw;
+  flex-shrink: 0;
+}
+
+.vp-btn-primary {
+  background: var(--color-primary);
+  color: var(--text-light);
+  font-size: 1.1148vw;
+  line-height: 1.3928vw;
+  padding: 1.1148vw 1.6702vw;
+}
+.vp-btn-primary:hover {
+  background: var(--color-primary-hover);
+}
+
+.vp-btn-white {
+  background: var(--bg-white);
+  color: var(--color-primary);
+  font-size: 1.1148vw;
+  line-height: 1.3928vw;
+  padding: 1.1148vw 1.6702vw;
+}
+.vp-btn-white:hover {
+  background: var(--bg-tag);
+}
+
+.vp-btn-outline {
+  background: var(--bg-white);
+  color: var(--color-primary);
+  border: var(--border-width) solid var(--border-color-light);
+  font-size: 0.9740vw;
+  line-height: 1.2461vw;
+  padding: 0.8342vw 1.3906vw;
+}
+.vp-btn-outline:hover {
+  background: var(--bg-page);
+}
+.vp-btn-full {
+  width: 100%;
+}

@@ -1,0 +1,212 @@
+/* ==========================================================================
+   VITALPATH MEDICAL - SHARED COMPONENTS (header, footer, placeholders)
+   Loaded on every page - shared rules live here so page CSS files only
+   need to declare their own deltas.
+   ========================================================================== */
+
+/* ------------------------------------------------------------------------
+   SHARED TEXT UTILITIES
+   ------------------------------------------------------------------------ */
+.vp-text-primary {
+  color: var(--color-primary);
+}
+
+/* ------------------------------------------------------------------------
+   SITE HEADER - SHARED
+   ------------------------------------------------------------------------ */
+.vp-header {
+  border-bottom: var(--border-width) solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+  backdrop-filter: blur(0.9346vw);
+}
+.landing-page .vp-header,
+.checkout-page .vp-header,
+.upsell-page .vp-header,
+.privacy-page .vp-header {
+  background-color: #F8F9FAE5;
+}
+.vp-header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 5.8vw;
+    max-width: 95vw;
+}
+.vp-logo {
+  display: flex;
+  align-items: center;
+  outline: none;
+}
+.vp-logo-img {
+    height:2.6563vw;
+    width: auto;
+}
+.vp-nav {
+    display: flex;
+    align-items: center;
+    gap: 3.4922vw;
+}
+.vp-nav a {
+  font-family: var(--font-main);
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  color: var(--text-heading);
+}
+.vp-nav a:hover {
+  color: var(--color-primary);
+}
+.vp-secure-badge {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2xs);
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  color: var(--text-muted);
+}
+.vp-secure-badge img {
+  width: 1.0903vw;
+  height: 1.0903vw;
+}
+
+/* ------------------------------------------------------------------------
+   SITE FOOTER - SHARED
+   ------------------------------------------------------------------------ */
+.vp-footer {
+  background: var(--color-navy);
+  padding: 5.0000vw;
+}
+.vp-footer-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--space-3xl);
+}
+.vp-footer-logo img {
+  height: 3.0469vw;
+  width: auto;
+}
+.vp-footer-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap:1.8750vw;
+  margin-bottom: var(--space-3xl);
+}
+.vp-footer-links a {
+  font-family: var(--font-main);
+  font-weight: 600;
+  font-size: var(--fs-sm);
+  line-height: var(--lh-xs);
+  letter-spacing: var(--ls-sm);
+  text-align: center;
+  vertical-align: middle;
+  color: var(--border-color-light);
+}
+.landing-page .vp-footer-links a {
+  opacity: 0.7;
+}
+.vp-footer-links a:hover {
+  color: var(--color-primary);
+}
+footer .vp-footer-disclaimer {
+  max-width: 62.3053vw;
+  margin: 0 auto 1.8750vw;
+  font-family: var(--font-main);
+  font-weight: 400;
+  font-size: var(--fs-sm);
+  line-height: var(--lh-sm);
+  letter-spacing: 0;
+  text-align: center;
+  vertical-align: middle;
+  color: var(--border-color-light);
+    opacity: 0.7;
+}
+footer .vp-footer-copyright {
+  font-family: var(--font-main);
+  font-weight: 400;
+  font-size: var(--fs-sm);
+  line-height: var(--lh-sm);
+  letter-spacing: 0;
+  text-align: center;
+  vertical-align: middle;
+  color: var(--border-color-light);
+  opacity: 0.7;
+}
+
+/* ------------------------------------------------------------------------
+   FORM VALIDATION STATES (shared - any page's input/select)
+   Add class="vp-input-error" or "vp-input-success" to toggle the border.
+   ------------------------------------------------------------------------ */
+input.vp-input-error,
+select.vp-input-error {
+  border-color: var(--border-input-error) !important;
+}
+input.vp-input-success,
+select.vp-input-success {
+  border-color: var(--border-input-success) !important;
+}
+
+/* ------------------------------------------------------------------------
+   IMAGE PLACEHOLDER (real photography swaps in later - see GLP2 README)
+   ------------------------------------------------------------------------ */
+.vp-img-placeholder {
+  background: var(--bg-placeholder);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #A7ADB8;
+  overflow: hidden;
+}
+.vp-img-placeholder img {
+  width: 30%;
+  height: 30%;
+  opacity: 0.6;
+}
+
+/* ------------------------------------------------------------------------
+   SECTION UTILITIES
+   ------------------------------------------------------------------------ */
+.vp-section {
+  padding: 9.3750vw 0;
+}
+.vp-text-center {
+  text-align: center;
+}
+.vp-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2xs);
+  background: var(--bg-tag);
+  color: var(--color-primary);
+  font-family: var(--font-main);
+  font-size: var(--fs-sm);
+  font-weight: 700;
+  line-height: var(--lh-xs);
+  letter-spacing: var(--ls-label);
+  text-transform: uppercase;
+  padding: 0.4673vw 1.0903vw;
+  border-radius: 1.5576vw;
+}
+.vp-tag img {
+  width: 0.9346vw;
+  height: 0.9346vw;
+}
+
+/* ------------------------------------------------------------------------
+   STAR RATING (shared - landing results grid + upsell testimonial)
+   ------------------------------------------------------------------------ */
+.vp-stars {
+  display: flex;
+  gap: 0vw;
+}
+.vp-stars img {
+  width: 1.5625vw;
+  height: 1.5625vw;
+}
+
+/* Header CTA button uses the nav's type scale, not the generic .vp-btn-primary size */
+.vp-header .vp-btn-primary {
+  font-size: var(--fs-sm);
+  padding: 1.1148vw 2.2vw;
+  border-radius: 0;
+}
